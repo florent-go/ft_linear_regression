@@ -35,14 +35,10 @@ b = 0
 L = 0.01
 iteration = 4000
 points = (data - data.min())/ (data.max() - data.min())
-print(points)
 for i in range(iteration):
-    if i % 50 == 0:
-        print(f"iteration: {i}")
-        print("b value = ", b)
-        print("m value = ", m)
     m, b = gradient_descent(m, b, points, L)
 
 plt.scatter(points.km, points.price, color="black")
 plt.plot(list(range(0, 2)), [m * x + b for x in range(0, 2)], color="red")
 plt.show()
+
