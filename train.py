@@ -117,6 +117,8 @@ print(f"y = mx + b")
 
 print(f"y = {round(unNorm_m,4)}x + {round(unNorm_b,4)}")
 
+print(f"error_quadratique = {erreur_quadratique(m, b, normData)}")
+
 # ======================Save_file==================== #
 
 file = open("save.csv", "w")
